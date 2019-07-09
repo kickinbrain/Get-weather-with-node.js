@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Get weather with Node.JS</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__header">
+      <% if(weather) { %>
+      <h1><%=weather%></h1>
+      <% } %>
+      <% if(error) {%>
+        <p class="error"><%=error%></p>
+      <%}%>
+      <p class="error">Some error</p>
+    </div>
+    <form action="/" method="post" class="app__content">
+      <div class="input">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="City name">
+      </div>
+      <button type="submit" class="btn">Show weather</button>
+    </form>
+  </div>
+</body>
+</html>
